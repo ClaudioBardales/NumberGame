@@ -31,12 +31,12 @@ function checkGuess() {
     guess > 99
   ) {
     feedback.textContent = "Enter a whole number between 1 and 99.";
-    feedback.style.color = "red";
+    feedback.style.color = "#8B0000";
     return;
   }
 
   attempts++;
-  feedback.style.color = "orange";
+  feedback.style.color = "#b36405";
 
   if (guess === randomNumber) {
     feedback.textContent = "You win!";
@@ -47,7 +47,7 @@ function checkGuess() {
 
     if (attempts === 7) {
       feedback.textContent = "You lose!";
-      feedback.style.color = "red";
+      feedback.style.color = "#8B0000";
       gameOver();
     } else if (guess > randomNumber) {
       feedback.textContent = "Guess was high.";
